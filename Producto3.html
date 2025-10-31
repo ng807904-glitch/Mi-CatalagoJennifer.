@@ -1,0 +1,64 @@
+<html>
+<head>
+<h1><title>Producto 3 — Auriculares Pro</title>
+</head>
+<body bgcolor="#fff0f5">
+
+<center><h1>Producto 3: <font color="#cc3366">Auriculares Pro</font></h1></center>
+
+<ul>
+<li><b><font color="#ff99cc">Características:</font></b></li>
+<li>Cancelación de ruido</li>
+<li>Sonido premium de alta fidelidad</li>
+<li>Conexión inalámbrica Bluetooth</li>
+</ul>
+
+<br>
+
+<b><font color="#cc3366">Descripción:</font></b>  
+Auriculares Pro ofrecen una experiencia sonora envolvente, ideales para música, películas o llamadas. Cómodos para uso prolongado y con batería de larga duración.
+
+<br><br>
+
+<center>
+<img src="auriculares3.webp" width="450" height="400"><br><br>
+
+<!-- Botones interactivos -->
+<button onclick="like3()">👍 Me gusta</button> <span id="likeCount3">0</span> Likes
+<br><br>
+<b>Comentarios:</b>
+<ul id="comentarios3"></ul>
+<input type="text" id="comentarioInput3" placeholder="Escribe tu comentario">
+<button onclick="comentar3()">💬 Comentar</button>
+</center>
+
+<script>
+var likes3 = 0;
+function like3() {
+    likes3++;
+    document.getElementById("likeCount3").innerHTML = likes3;
+}
+
+function comentar3() {
+    var input = document.getElementById("comentarioInput3");
+    var texto = input.value;
+    if(texto != "") {
+        var lista = document.getElementById("comentarios3");
+        var nuevo = document.createElement("li");
+        nuevo.innerHTML = texto;
+        lista.appendChild(nuevo);
+        input.value = "";
+    } else {
+        alert("Escribe un comentario antes de enviar.");
+    }
+}
+</script>
+
+<br>
+<center>
+<a href="Index.html" style="color:#cc3366; text-decoration:none;">Volver al Catálogo</a> &nbsp;|&nbsp; 
+<a href="Producto4.html" style="color:#cc3366; text-decoration:none;">Ir al Producto 4</a></h1>
+</center>
+
+</body>
+</html>

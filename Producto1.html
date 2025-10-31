@@ -1,0 +1,64 @@
+<html>
+<head>
+<h1><title>Producto 1 — Perfume Elite</title>
+</head>
+<body bgcolor="#fff0f5"> <!-- Lila muy suave -->
+
+<center><h1>Producto 1: <font color="#cc3366">Perfume Elite</font></h1></center>
+
+<ul>
+<li><b><font color="#ff99cc">Características:</font></b></li>
+<li>Fragancia sofisticada y duradera</li>
+<li>Contenido: 100 ml</li>
+<li>Presentación: caja premium</li>
+</ul>
+
+<br>
+
+<b><font color="#cc3366">Descripción:</font></b>  
+Perfume Elite es ideal para quienes buscan una fragancia única, elegante y con larga duración. Su aroma combina notas amaderadas y cítricas, haciendo que destaque en cualquier ocasión.
+
+<br><br>
+
+<center>
+<img src="perfume1.jpeg" width="450" height="400"><br><br>
+
+<!-- Botones interactivos -->
+<button onclick="like1()">👍 Me gusta</button> <span id="likeCount1">0</span> Likes
+<br><br>
+<b>Comentarios:</b>
+<ul id="comentarios1"></ul>
+<input type="text" id="comentarioInput1" placeholder="Escribe tu comentario">
+<button onclick="comentar1()">💬 Comentar</button>
+</center>
+
+<script>
+var likes1 = 0;
+function like1() {
+    likes1++;
+    document.getElementById("likeCount1").innerHTML = likes1;
+}
+
+function comentar1() {
+    var input = document.getElementById("comentarioInput1");
+    var texto = input.value;
+    if(texto != "") {
+        var lista = document.getElementById("comentarios1");
+        var nuevo = document.createElement("li");
+        nuevo.innerHTML = texto;
+        lista.appendChild(nuevo);
+        input.value = "";
+    } else {
+        alert("Escribe un comentario antes de enviar.");
+    }
+}
+</script>
+
+<br>
+<center>
+<a href="Index.html" style="color:#cc3366; text-decoration:none;">Volver al Catálogo</a> &nbsp;|&nbsp; 
+<a href="Producto2.html" style="color:#cc3366; text-decoration:none;">Ir al Producto 2</a></h1>
+</center>
+
+</body>
+</html>

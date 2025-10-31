@@ -1,0 +1,67 @@
+<html>
+<head>
+<h1><title>Producto 5 — Cámara Sony</title>
+</head>
+<body bgcolor="#fff0f5">
+
+<center><h1>Producto 5: <font color="#cc3366">Cámara Sony</font></h1></center>
+
+<ul>
+<li><b><font color="#ff99cc">Características:</font></b></li>
+<li>Ideal para viajes y contenido social</li>
+<li>Alta resolución y enfoque rápido</li>
+<li>Compacta y ligera</li>
+</ul>
+
+<br>
+
+<b><font color="#cc3366">Descripción:</font></b>  
+La Cámara Sony es perfecta para capturar momentos especiales. Fácil de usar, portátil y con calidad de imagen excelente para fotografía y video.
+
+<br><br>
+
+<center>
+<img src="camara5.webp" width="450" height="400"><br><br>
+
+<!-- Botones interactivos -->
+<button onclick="like5()">👍 Me gusta</button> <span id="likeCount5">0</span> Likes
+<br><br>
+<b>Comentarios:</b>
+<ul id="comentarios5"></ul>
+<input type="text" id="comentarioInput5" placeholder="Escribe tu comentario">
+<button onclick="comentar5()">💬 Comentar</button>
+</center>
+
+<script>
+var likes5 = 0;
+function like5() {
+    likes5++;
+    document.getElementById("likeCount5").innerHTML = likes5;
+}
+
+function comentar5() {
+    var input = document.getElementById("comentarioInput5");
+    var texto = input.value;
+    if(texto != "") {
+        var lista = document.getElementById("comentarios5");
+        var nuevo = document.createElement("li");
+        nuevo.innerHTML = texto;
+        lista.appendChild(nuevo);
+        input.value = "";
+    } else {
+        alert("Escribe un comentario antes de enviar.");
+    }
+}
+</script>
+
+<br>
+<center>
+<a href="Index.html" style="color:#cc3366; text-decoration:none;">Volver al Catalogo</a></h1><h1><center><form action="Indexfinal.html">
+  <input type="submit" value=" Ir al final del catálogo"></center></h1>
+</form>
+
+
+</center>
+
+</body>
+</html>

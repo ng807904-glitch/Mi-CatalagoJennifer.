@@ -1,0 +1,64 @@
+<html>
+<head>
+<h1><title>Producto 2 — Reloj Sport</title>
+</head>
+<body bgcolor="#fff0f5">
+
+<center><h1>Producto 2: <font color="#cc3366">Reloj Sport</font></h1></center>
+
+<ul>
+<li><b><font color="#ff99cc">Características:</font></b></li>
+<li>Resistente al agua</li>
+<li>Diseño moderno y deportivo</li>
+<li>Correa ajustable y cómoda</li>
+</ul>
+
+<br>
+
+<b><font color="#cc3366">Descripción:</font></b>  
+El Reloj Sport combina estilo y funcionalidad, ideal para actividades deportivas o uso diario. Cuenta con cronómetro, alarma y resistencia al agua.
+
+<br><br>
+
+<center>
+<img src="reloj2.webp" width="450" height="400"><br><br>
+
+<!-- Botones interactivos -->
+<button onclick="like2()">👍 Me gusta</button> <span id="likeCount2">0</span> Likes
+<br><br>
+<b>Comentarios:</b>
+<ul id="comentarios2"></ul>
+<input type="text" id="comentarioInput2" placeholder="Escribe tu comentario">
+<button onclick="comentar2()">💬 Comentar</button>
+</center>
+
+<script>
+var likes2 = 0;
+function like2() {
+    likes2++;
+    document.getElementById("likeCount2").innerHTML = likes2;
+}
+
+function comentar2() {
+    var input = document.getElementById("comentarioInput2");
+    var texto = input.value;
+    if(texto != "") {
+        var lista = document.getElementById("comentarios2");
+        var nuevo = document.createElement("li");
+        nuevo.innerHTML = texto;
+        lista.appendChild(nuevo);
+        input.value = "";
+    } else {
+        alert("Escribe un comentario antes de enviar.");
+    }
+}
+</script>
+
+<br>
+<center>
+<a href="Index.html" style="color:#cc3366; text-decoration:none;">Volver al Catálogo</a> &nbsp;|&nbsp; 
+<a href="Producto3.html" style="color:#cc3366; text-decoration:none;">Ir al Producto 3</a></h1>
+</center>
+
+</body>
+</html>

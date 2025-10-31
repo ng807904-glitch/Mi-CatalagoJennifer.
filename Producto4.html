@@ -1,0 +1,64 @@
+<html>
+<head>
+<h1><title>Producto 4 — Mochila Urban</title>
+</head>
+<body bgcolor="#fff0f5">
+
+<center><h1>Producto 4: <font color="#cc3366">Mochila Urban</font></h1></center>
+
+<ul>
+<li><b><font color="#ff99cc">Características:</font></b></li>
+<li>Material resistente y duradero</li>
+<li>Varios compartimentos inteligentes</li>
+<li>Diseño moderno y cómodo</li>
+</ul>
+
+<br>
+
+<b><font color="#cc3366">Descripción:</font></b>  
+Mochila Urban es perfecta para estudiantes y viajeros. Su diseño ergonómico permite llevar todo de forma organizada y segura.
+
+<br><br>
+
+<center>
+<img src="mochila4.webp" width="350" height="400"><br><br>
+
+<!-- Botones interactivos -->
+<button onclick="like4()">👍 Me gusta</button> <span id="likeCount4">0</span> Likes
+<br><br>
+<b>Comentarios:</b>
+<ul id="comentarios4"></ul>
+<input type="text" id="comentarioInput4" placeholder="Escribe tu comentario">
+<button onclick="comentar4()">💬 Comentar</button>
+</center>
+
+<script>
+var likes4 = 0;
+function like4() {
+    likes4++;
+    document.getElementById("likeCount4").innerHTML = likes4;
+}
+
+function comentar4() {
+    var input = document.getElementById("comentarioInput4");
+    var texto = input.value;
+    if(texto != "") {
+        var lista = document.getElementById("comentarios4");
+        var nuevo = document.createElement("li");
+        nuevo.innerHTML = texto;
+        lista.appendChild(nuevo);
+        input.value = "";
+    } else {
+        alert("Escribe un comentario antes de enviar.");
+    }
+}
+</script>
+
+<br>
+<center>
+<a href="Index.html" style="color:#cc3366; text-decoration:none;">Volver al Catalogo</a> &nbsp;|&nbsp; 
+<a href="Producto5.html" style="color:#cc3366; text-decoration:none;">Ir al Producto 5</a></h1>
+</center>
+
+</body>
+</html>
